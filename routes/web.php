@@ -17,8 +17,9 @@ Route::get('/', function () {
     return view('index');
 });
 
+
 Route::get('/profile', function () {
     return view('profile');
-})->middleware(['auth']);
+})->name('profile')->middleware(['auth']);
 
-Route::get('/profile', 'MyController@dashboard')->name('profile');
+
