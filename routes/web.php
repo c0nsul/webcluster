@@ -15,4 +15,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('index');
+});
+
+Route::get('/profile', function () {
+    return view('profile');
 })->middleware(['auth']);
+
+Route::get('/profile', 'MyController@dashboard')->name('profile');

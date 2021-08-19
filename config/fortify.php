@@ -46,7 +46,7 @@ return [
     |
     */
 
-    'callsign' => 'email',
+    'username' => 'callsign',
 
     'email' => 'email',
 

@@ -3,7 +3,6 @@
 @section('content')
     <div class="container">
         <div class="row justify-content-center">
-            index body
+profile
         </div>
     </div>
-@endsection
