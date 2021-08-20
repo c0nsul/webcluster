@@ -20,6 +20,8 @@ Route::get('/', function () {
 
 Route::get('/profile', function () {
     return view('profile');
-})->name('profile')->middleware(['auth']);
+})
+->name('profile')
+->middleware(['auth', 'verified']);
 
 

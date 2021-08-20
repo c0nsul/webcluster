@@ -59,7 +59,7 @@
                         @endif
                     @else
                         <li class="nav-item">
-                            <a class="nav-link active" href="{{ route('profile') }}">{{ __('Profile') }}</a>
+                            <a class="nav-link @if (Route::has('profile')) active @endif" href="{{ route('profile') }}">{{ __('Profile') }}</a>
                         </li>
 
                         <li class="nav-item dropdown">
