@@ -22,6 +22,6 @@ class Country extends Model
 
     public function cluster(): \Illuminate\Database\Eloquent\Relations\HasMany
     {
-        return $this->hasMany('App\Cluster');
+        return $this->hasMany('App\Models\Cluster');
     }
 }

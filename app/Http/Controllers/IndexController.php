@@ -2,11 +2,19 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Models\Cluster;
 
 class IndexController extends Controller
 {
-    public function index(){
-        return view('index');
+    /**
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
+     */
+    public function index()
+    {
+        $records = Cluster::orderBy('time', 'desc')->get();
+
+        return view('index', [
+            'records' => $records,
+        ]);
     }
 }
