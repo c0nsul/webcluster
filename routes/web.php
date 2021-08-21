@@ -13,15 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+//guest
+Route::get('/', [App\Http\Controllers\IndexController::class, 'index']);
 
-
-Route::get('/profile', function () {
-    return view('profile');
-})
+//auth
+Route::get('/profile', [App\Http\Controllers\ProfileController::class, 'profile'])
 ->name('profile')
 ->middleware(['auth', 'verified']);
+
 
 
