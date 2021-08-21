@@ -1,3 +1,3 @@
-#ham radio web dx cluster web interface
+#ham radio dx-cluster web interface
 
 code based on laravel 8.55
